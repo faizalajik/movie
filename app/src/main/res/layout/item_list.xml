@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_margin="10dp"
-        android:text="@string/judul_film"
+        android:text="@string/movie_title"
         android:textSize="20sp"></TextView>
 
 </LinearLayout>

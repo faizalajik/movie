@@ -12,9 +12,9 @@ import java.util.List;
 
 public class FilmAdapter extends BaseAdapter {
     private Context context;
-    private List<Film> film = new ArrayList<>();
+    private List<Movie> film = new ArrayList<>();
 
-    public void setFilm(List<Film> film) {
+    public void setFilm(List<Movie> film) {
         this.film = film;
     }
 
@@ -46,7 +46,7 @@ public class FilmAdapter extends BaseAdapter {
 
         ViewHolder viewHolder = new ViewHolder(itemView);
 
-        Film film = (Film) getItem(position);
+        Movie film = (Movie) getItem(position);
         viewHolder.bind(film);
         return itemView;
     }
@@ -60,7 +60,7 @@ public class FilmAdapter extends BaseAdapter {
             img = view.findViewById(R.id.img_film);
         }
 
-        void bind(Film film) {
+        void bind(Movie film) {
             tvJudul.setText(film.getJudul());
             img.setImageResource(film.getImg());
         }
