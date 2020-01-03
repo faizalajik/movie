@@ -1,45 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginVertical="20dp"
-        android:orientation="vertical"
         tools:context=".DetailActivity">
 
         <ImageView
+            android:id="@+id/background_photo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/poster_hunterkiller"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
             android:id="@+id/foto_poster"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:src="@drawable/poster_hunterkiller"></ImageView>
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/poster_hunterkiller"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:paddingLeft="10dp"
+                android:text="@string/overview"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/foto_poster"
+                android:layout_marginTop="50dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/Description"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/overview">
+            </TextView>
         <TextView
-            android:id="@+id/judul"
+            android:id="@+id/movie_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:text="@string/judul_film"
+            android:layout_marginLeft="10dp"
+            android:text="@string/movie_title"
             android:textColor="@android:color/black"
-            android:textSize="30sp"></TextView>
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/foto_poster"
+            app:layout_constraintTop_toBottomOf="@id/background_photo" />
 
         <TextView
-            android:id="@+id/deskripsi"
+            android:id="@+id/year"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/year"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/movie_title"
+            app:layout_constraintTop_toBottomOf="@id/movie_title"></TextView>
+
+        <TextView
+            android:id="@+id/dot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:text="@string/deskripsi"
-            android:textSize="30sp">
+            android:layout_marginLeft="0dp"
+            android:text="@string/dot"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/year"
+            app:layout_constraintTop_toTopOf="@id/year" />
 
-        </TextView>
+        <TextView
+            android:id="@+id/movie_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/movie_year"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/dot"
+            app:layout_constraintTop_toTopOf="@id/year" />
 
+        <TextView
+            android:id="@+id/runtime"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/runtime"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/year"
+            app:layout_constraintTop_toBottomOf="@id/year"></TextView>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/dot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:text="@string/dot"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/runtime"
+            app:layout_constraintTop_toTopOf="@id/runtime" />
+
+        <TextView
+            android:id="@+id/movie_runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/movie_runtime"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/dot1"
+            app:layout_constraintTop_toTopOf="@id/runtime" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/genre"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/runtime"
+            app:layout_constraintTop_toBottomOf="@id/runtime"></TextView>
+
+        <TextView
+            android:id="@+id/dot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:text="@string/dot"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/genre"
+            app:layout_constraintTop_toTopOf="@id/genre" />
+
+        <TextView
+            android:id="@+id/movie_genre"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:paddingRight="5dp"
+            android:text="@string/movie_genre"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/movie_runtime"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/genre" />
+
+        <TextView
+            android:id="@+id/episode"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/episodes"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/genre"
+            app:layout_constraintTop_toBottomOf="@id/movie_genre"></TextView>
+
+        <TextView
+            android:id="@+id/dot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:text="@string/dot"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/episode"
+            app:layout_constraintTop_toTopOf="@id/episode" />
+
+        <TextView
+            android:id="@+id/tvshow_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/tv_show_episodes"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/dot3"
+            app:layout_constraintTop_toTopOf="@id/episode" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

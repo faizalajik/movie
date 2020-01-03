@@ -13,12 +13,174 @@
         <item>@drawable/poster_glass</item>
         <item>@drawable/poster_hunterkiller</item>
     </array>
-    <string name="judul_film">Judul Film</string>
+    <array name="image_tvshow">
+        <item>@drawable/poster_arrow</item>
+        <item>@drawable/poster_doom_patrol</item>
+        <item>@drawable/poster_dragon_ball</item>
+        <item>@drawable/poster_fairytail</item>
+        <item>@drawable/poster_family_guy</item>
+        <item>@drawable/poster_flash</item>
+        <item>@drawable/poster_gotham</item>
+        <item>@drawable/poster_grey_anatomy</item>
+        <item>@drawable/poster_hanna</item>
+        <item>@drawable/poster_iron_fist</item>
+        <item>@drawable/poster_naruto_shipudden</item>
+        <item>@drawable/poster_ncis</item>
+    </array>
+    <string name="movie_title">Movie Title</string>
 
     <string name="app_name">Film</string>
-    <string name="deskripsi">Deskripsi</string>
+    <string name="Description">Description</string>
+    <string name="tab_title1">Movie</string>
+    <string name="tab_title2">TV Show</string>
 
-    <string-array name="Deskripsi">
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_show_title">tv show Title</string>
+    <string name="title">Title </string>
+    <string name="year">Year </string>
+    <string name="movie_year">movie year</string>
+    <string name="overview">Overview</string>
+    <string name="runtime">Runtime</string>
+    <string name="movie_runtime">movie runtime</string>
+    <string name="dot">:</string>
+    <string name="genre">Genre</string>
+    <string name="movie_genre">movie genre</string>
+    <string name="change_leanguage_setting">Change Leanguage Setting</string>
+    <string name="episodes">Episodes</string>
+    <string name="tv_show_episodes">TV Show Episodes</string>
+
+    <string-array name="title">
+        <item>A Star</item>
+        <item>Aquaman</item>
+        <item>Avenger Infinity</item>
+        <item>Bird Box</item>
+        <item>Bohemian</item>
+        <item>Bumblebee</item>
+        <item>Creed</item>
+        <item>Deadpool</item>
+        <item>How to Train Your Dragon</item>
+        <item>Dragon Ball</item>
+        <item>Glass</item>
+        <item>Hunter Killer</item>
+    </string-array>
+
+    <string-array name="title_tvshow">
+        <item>Arrow</item>
+        <item>Doom Patrol</item>
+        <item>Dragon Ball</item>
+        <item>Fairy Tail</item>
+        <item>Family Guy</item>
+        <item>Flash</item>
+        <item>Gotham</item>
+        <item>Grey Anatomy</item>
+        <item>Hanna</item>
+        <item>Iron Fist</item>
+        <item>Naruto Shipudden</item>
+        <item>Ncis</item>
+    </string-array>
+
+    <string-array name="runtime">
+        <item>2h 16m</item>
+        <item>2h 24m</item>
+        <item>2h 29m</item>
+        <item>2h 4m</item>
+        <item>2h 15m</item>
+        <item>1h 54m</item>
+        <item>2h 13m</item>
+        <item>1h 48m</item>
+        <item>1h 40m</item>
+        <item>1h 41m</item>
+        <item>2h 9m</item>
+        <item>2h 2m</item>
+    </string-array>
+    <string-array name="runtime_tvshow">
+        <item>42m</item>
+        <item>60m</item>
+        <item>-</item>
+        <item>25m</item>
+        <item>22m</item>
+        <item>44m</item>
+        <item>43m, 60m</item>
+        <item>43m</item>
+        <item>50m</item>
+        <item>55m</item>
+        <item>25m</item>
+        <item>45m</item>
+    </string-array>
+    <string-array name="genre">
+        <item>Drama, Romance, Music</item>
+        <item>Action, Adventure, Fantasy</item>
+        <item>Adventure, Action, Science Fiction</item>
+        <item>Thriller, Drama</item>
+        <item>Drama, Music</item>
+        <item>Action,, Adventure</item>
+        <item>Drama</item>
+        <item>Action, Adventure, Comedy</item>
+        <item>Fantasi, Adventure, Animation, Family</item>
+        <item>Fantasi, Adventure, Animation</item>
+        <item>Thriller, Drama, Science Fiction</item>
+        <item>Action, Thriller</item>
+    </string-array>
+    <string-array name="genre_tvshow">
+        <item>Drama, Crime, Mystery</item>
+        <item>Action, Adventure, Science Fiction</item>
+        <item>Adventure, Action, Animation</item>
+        <item>Adventure, Action, Animation, Fantasy</item>
+        <item>Animation, Comedy</item>
+        <item>Drama,  Science Fiction</item>
+        <item>Drama, Fantasy, Crime</item>
+        <item>Drama</item>
+        <item>Drama, Adventure, Action</item>
+        <item>Action, Adventure</item>
+        <item>Animation, Drama, Comedy</item>
+        <item>Action, Adventure, Crime, Drama</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2013</item>
+        <item>2018</item>
+        <item>2018</item>
+        <item>2018</item>
+        <item>2018</item>
+        <item>2018</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2010</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2018</item>
+    </string-array>
+    <string-array name="year_tvshow">
+        <item>2012</item>
+        <item>2019</item>
+        <item>1989</item>
+        <item>2009</item>
+        <item>1999</item>
+        <item>2014</item>
+        <item>2014</item>
+        <item>2009</item>
+        <item>2019</item>
+        <item>2017</item>
+        <item>2007</item>
+        <item>2003</item>
+    </string-array>
+    <string-array name="episode">
+        <item>10 Episodes</item>
+        <item>15 Episodes</item>
+        <item>41 Episodes</item>
+        <item>51 Episodes</item>
+        <item>9 Episodes</item>
+        <item>9 Episode</item>
+        <item>12 Episodes</item>
+        <item>9 Episodes</item>
+        <item>8 Episodes</item>
+        <item>10 Episodes</item>
+        <item>87 Episodes</item>
+        <item>11 Episodes</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="description">
         <item>Seasoned musician Jackson Maine discovers and falls in love with struggling artist Ally. She has just about given up on her dream to make it big as a singer until Jack coaxes her into the spotlight.</item>
         <item>Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world.</item>
         <item>As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows Thanos. A despot of intergalactic infamy</item>
@@ -32,19 +194,18 @@
         <item>In a series of escalating encounters, former security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty four personalities. Meanwhile, the shadowy presence</item>
         <item>Captain Glass of the USS Arkansas discovers that a coup detat is taking place in Russia, so he and his crew join an elite group working on the ground to prevent a war.</item>
     </string-array>
-
-    <string-array name="judul">
-        <item>A Star</item>
-        <item>Aquaman</item>
-        <item>Avenger Infinity</item>
-        <item>Bird Box</item>
-        <item>Bohemian</item>
-        <item>Bumblebee</item>
-        <item>Creed</item>
-        <item>Deadpool</item>
-        <item>How to Train Your Dragon</item>
-        <item>Dragon Ball</item>
-        <item>Glass</item>
-        <item>Hunter Killer</item>
+    <string-array name="tvshow_description">
+        <item>Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.</item>
+        <item>The Doom Patrols members each suffered horrible accidents that gave them superhuman abilities but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence and to protect Earth from what they find.</item>
+        <item>Dragon Ball Z follows the adventures of Goku who, along with the Z Warriors, defends the Earth against evil. The action adventures are entertaining and reinforce the concept of good versus evil. Dragon Ball Z teaches valuable character virtues such as teamwork, loyalty, and trustworthiness.</item>
+        <item>Lucy is a 17 year old girl, who wants to be a ful fledged mage. One day when visiting Harujion Town, she meets Natsu, a young man who gets sick easily by any type of transportation. But Natsu isndatat just any ordinary kid, hedatas a member of one of the worlddatas most infamous mage guilds: Fairy Tail.</item>
+        <item>Sick, twisted, politically incorrect and Freakindata Sweet animated series featuring the adventures of the dysfunctional Griffin family. Bumbling Peter and longsuffering Lois have three kids. Stewie a brilliant but sadistic baby bent on killing his mother and taking over the world, Meg the oldest, and is the most unpopular girl in town and Chris the middle kid, hedatas not very bright but has a passion for movies. The final member of the family is Brian a talking dog and much more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting through his own life issues.</item>
+        <item>After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only metahuman who was created in the wake of the accelerator explosion and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it wondatat be long before the world learns what Barry Allen has become. The Flash.</item>
+        <item>Everyone knows the name Commissioner Gordon. He is one of the crime worlds greatest foes, a man whose reputation is synonymous with law and order. But what is known of Gordons story and his rise from rookie detective to Police Commissioner What did it take to navigate the multiple layers of corruption that secretly ruled Gotham City, the spawning ground of the worlds most iconic villains And what circumstances created them the larger than life personas who would become Catwoman, The Penguin, The Riddler, Two Face and The Joker</item>
+        <item>Follows the personal and professional lives of a group of doctors at Seattles Grey Sloan Memorial Hospital.</item>
+        <item>This thriller and coming of age drama follows the journey of an extraordinary young girl as she evades the relentless pursuit of an offbook CIA agent and tries to unearth the truth behind who she is. Based on the 2011 Joe Wright film</item>
+        <item>Danny Rand resurfaces 15 years after being presumed dead. Now, with the power of the Iron Fist, he seeks to reclaim his past and fulfill his destiny.</item>
+        <item>Naruto Shippuuden is the continuation of the original animated TV series Naruto.The story revolves around an older and slightly more matured Uzumaki Naruto and his quest to save his friend Uchiha Sasuke from the grips of the snake like Shinobi, Orochimaru. After 2 and a half years Naruto finally returns to his village of Konoha, and sets about putting his ambitions to work, though it will not be easy, as He has amassed a few more dangerous enemies, in the likes of the shinobi organization; Akatsuki.</item>
+        <item>From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.</item>
     </string-array>
 </resources>
