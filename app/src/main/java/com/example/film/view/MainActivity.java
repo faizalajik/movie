@@ -12,7 +12,6 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.film.R;
 import com.example.film.adapter.HomeAdapter;
-import com.example.film.viewmodel.HomeViewModel;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tab;
     private ViewPager vp;
     private String state = "home";
-    private HomeViewModel movieViewModel;
+    private HomeAdapter homeAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
         tab.setTabMode(TabLayout.MODE_SCROLLABLE);
         tab.setTabMode(TabLayout.MODE_FIXED);
 
-        HomeAdapter homeAdapter = new HomeAdapter(this, getSupportFragmentManager());
+        if (savedInstanceState != null && state == null) {
+            state = savedInstanceState.getString("state");
+        }
+        homeAdapter = new HomeAdapter(this, getSupportFragmentManager(), state);
         vp.setAdapter(homeAdapter);
         tab.setupWithViewPager(vp);
         getSupportActionBar().setElevation(0);
@@ -52,6 +54,25 @@ public class MainActivity extends AppCompatActivity {
             Intent mIntent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
             startActivity(mIntent);
         }
+        if (item.getItemId() == R.id.favorite) {
+            state = "fav";
+            Intent intent = new Intent(this, FavoriteActivity.class);
+            intent.putExtra("stats", state);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("state", state);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        state = savedInstanceState.getString("state");
+        homeAdapter = new HomeAdapter(this, getSupportFragmentManager(), state);
     }
 }

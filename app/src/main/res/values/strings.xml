@@ -5,18 +5,18 @@
     <string name="Description">Description</string>
     <string name="tab_title1">Movie</string>
     <string name="tab_title2">TV Show</string>
+    <string name="tab_title3">Favorite Movie</string>
+    <string name="tab_title4">Favorite TV Show</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_show_title">tv show Title</string>
-    <string name="title">Title </string>
     <string name="year">Year </string>
     <string name="movie_year">movie year</string>
     <string name="overview">Overview</string>
     <string name="rated">Rated</string>
     <string name="movie_rated">movie rated</string>
     <string name="dot">:</string>
-    <string name="genre">Genre</string>
-    <string name="movie_genre">movie genre</string>
     <string name="change_language_setting">Change Language Setting</string>
     <string name="code_language">en-US</string>
+    <string name="favorite">Favorite</string>
+    <string name="poster">poster</string>
 </resources>

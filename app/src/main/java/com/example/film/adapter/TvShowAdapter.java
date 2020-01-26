@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +17,7 @@ import com.example.film.model.TvShow;
 import com.example.film.view.DetailActivity;
 
 import java.util.List;
+
 import static com.example.film.view.DetailActivity.KODE;
 import static com.example.film.view.DetailActivity.STATE;
 
@@ -29,9 +31,10 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
         this.tvShowsList = tvShowsList;
     }
 
-    public  TvShowAdapter(){
+    public TvShowAdapter() {
 
     }
+
     @NonNull
     @Override
     public TvShowAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -46,7 +49,7 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
     public void onBindViewHolder(@NonNull TvShowAdapter.ViewHolder holder, final int position) {
         holder.tvTitle.setText(tvShowsList.get(position).getName());
 
-        Glide.with(context).load("https://image.tmdb.org/t/p/w342"+tvShowsList.get(position).getPosterPath()).into(holder.img);
+        Glide.with(context).load("https://image.tmdb.org/t/p/w342" + tvShowsList.get(position).getPosterPath()).into(holder.img);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

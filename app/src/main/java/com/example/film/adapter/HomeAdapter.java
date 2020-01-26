@@ -16,6 +16,7 @@ import com.example.film.view.TvShowFragment;
 public class HomeAdapter extends FragmentPagerAdapter {
 
     private final Context context;
+    private final String state;
 
 
     @StringRes
@@ -23,10 +24,16 @@ public class HomeAdapter extends FragmentPagerAdapter {
             R.string.tab_title1,
             R.string.tab_title2
     };
+    @StringRes
+    private final int[] TAB_TITLES2 = new int[]{
+            R.string.tab_title3,
+            R.string.tab_title4
+    };
 
-    public HomeAdapter(Context context, FragmentManager fm) {
+    public HomeAdapter(Context context, FragmentManager fm, String state) {
         super(fm);
         this.context = context;
+        this.state = state;
     }
 
     @Override
@@ -37,15 +44,19 @@ public class HomeAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new MoviesFragment();
+            return new MoviesFragment(state);
         } else {
-            return new TvShowFragment();
+            return new TvShowFragment(state);
         }
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return context.getResources().getString(TAB_TITLES[position]);
+        if (state.equals("home")) {
+            return context.getResources().getString(TAB_TITLES[position]);
+        } else {
+            return context.getResources().getString(TAB_TITLES2[position]);
+        }
     }
 }

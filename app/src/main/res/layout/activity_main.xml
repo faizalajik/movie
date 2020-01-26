@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.MainActivity">
-
+    tools:context=".view.MainActivity"
+    android:id="@+id/frame_container"
+    >
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"

@@ -5,4 +5,9 @@
         android:id="@+id/action_change_settings"
         android:title="@string/change_language_setting"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/favorite"
+        android:title="Favorite"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_stars_black_24dp"/>
 </menu>

@@ -6,19 +6,17 @@
     <string name="Description">Deskripsi</string>
     <string name="tab_title1">Film</string>
     <string name="tab_title2">Acara TV</string>
+    <string name="tab_title3">Favorit Film</string>
+    <string name="tab_title4">Favorit Acara TV</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_show_title">tv show judul</string>
-    <string name="title">judul</string>
     <string name="year">Tahun</string>
     <string name="movie_year">Film year</string>
     <string name="overview">Pertinjauan</string>
     <string name="rated">Penilaian</string>
     <string name="movie_rated">Penilaian Film</string>
     <string name="dot">:</string>
-    <string name="genre">Jenis</string>
     <string name="code_language">id-ID</string>
-    <string name="movie_genre">Jenis Film</string>
     <string name="change_language_setting">Ubah Pengaturan Bahasa</string>
 
 </resources>
