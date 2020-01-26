@@ -1,4 +1,4 @@
-package com.example.film;
+package com.example.film.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,11 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.film.Model.Movie;
-import com.example.film.View.DetailActivity;
+import com.bumptech.glide.Glide;
+import com.example.film.R;
+import com.example.film.model.Movie;
+import com.example.film.view.DetailActivity;
 
 import java.util.List;
-import static com.example.film.View.DetailActivity.KODE;
+import static com.example.film.view.DetailActivity.KODE;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
     private Context context;
@@ -23,6 +25,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public MovieAdapter(Context context, List<Movie> movieList) {
         this.context = context;
         this.movieList = movieList;
+    }
+    public MovieAdapter(){
+
     }
 
     @NonNull
@@ -37,8 +42,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MovieAdapter.ViewHolder holder, final int position) {
-        holder.tvTitle.setText(movieList.get(position).gettitle());
-        holder.img.setImageResource(movieList.get(position).getImg());
+        holder.tvTitle.setText(movieList.get(position).getTitle());
+        Glide.with(context).load("https://image.tmdb.org/t/p/w342"+movieList.get(position).getPosterPath()).into(holder.img);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

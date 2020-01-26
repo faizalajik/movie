@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/view_movie"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="20dp"
-    android:layout_marginBottom="3dp">
+    android:layout_marginBottom="3dp"
+    app:cardElevation="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
-        android:paddingBottom="10dp">
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_blue_dark"
+        android:paddingVertical="10dp">
 
         <ImageView
             android:id="@+id/img_movie"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/ic_launcher_background"></ImageView>
 
         <TextView
@@ -29,7 +32,9 @@
             android:layout_gravity="center_vertical"
             android:layout_margin="10dp"
             android:text="@string/movie_title"
-            android:textSize="20sp"></TextView>
+            android:textSize="20sp"
+            android:textColor="@android:color/black">
+        </TextView>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

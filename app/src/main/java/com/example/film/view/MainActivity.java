@@ -1,4 +1,4 @@
-package com.example.film;
+package com.example.film.view;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,12 +10,17 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.film.R;
+import com.example.film.adapter.HomeAdapter;
+import com.example.film.viewmodel.HomeViewModel;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tab;
     private ViewPager vp;
+    private String state = "home";
+    private HomeViewModel movieViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

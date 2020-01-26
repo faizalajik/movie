@@ -1,24 +1,87 @@
-package com.example.film;
+package com.example.film.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
 public class TvShow implements Parcelable {
-    private String title;
-    private String detail;
-    private String episode;
-    private String year;
-    private String runtime;
+    public TvShow() {
+
+    }
+
+    @SerializedName("original_name")
+    @Expose
+    private String originalName;
+    @SerializedName("genre_ids")
+    @Expose
+    private List<Integer> genreIds = null;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("popularity")
+    @Expose
+    private Double popularity;
+    @SerializedName("origin_country")
+    @Expose
+    private List<String> originCountry = null;
+    @SerializedName("vote_count")
+    @Expose
+    private Integer voteCount;
+    @SerializedName("first_air_date")
+    @Expose
+    private String firstAirDate;
+    @SerializedName("backdrop_path")
+    @Expose
+    private String backdropPath;
+    @SerializedName("original_language")
+    @Expose
+    private String originalLanguage;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("vote_average")
+    @Expose
+    private Double voteAverage;
+    @SerializedName("overview")
+    @Expose
+    private String overview;
+    @SerializedName("poster_path")
+    @Expose
+    private String posterPath;
 
     protected TvShow(Parcel in) {
-        title = in.readString();
-        detail = in.readString();
-        episode = in.readString();
-        year = in.readString();
-        genre = in.readString();
-        runtime = in.readString();
-
-        img = in.readInt();
+        originalName = in.readString();
+        name = in.readString();
+        if (in.readByte() == 0) {
+            popularity = null;
+        } else {
+            popularity = in.readDouble();
+        }
+        originCountry = in.createStringArrayList();
+        if (in.readByte() == 0) {
+            voteCount = null;
+        } else {
+            voteCount = in.readInt();
+        }
+        firstAirDate = in.readString();
+        backdropPath = in.readString();
+        originalLanguage = in.readString();
+        if (in.readByte() == 0) {
+            id = null;
+        } else {
+            id = in.readInt();
+        }
+        if (in.readByte() == 0) {
+            voteAverage = null;
+        } else {
+            voteAverage = in.readDouble();
+        }
+        overview = in.readString();
+        posterPath = in.readString();
     }
 
     public static final Creator<TvShow> CREATOR = new Creator<TvShow>() {
@@ -33,67 +96,108 @@ public class TvShow implements Parcelable {
         }
     };
 
-    public TvShow() {
-
+    public String getOriginalName() {
+        return originalName;
     }
 
-    public String getYear() {
-        return year;
+    public void setOriginalName(String originalName) {
+        this.originalName = originalName;
     }
 
-    public void setYear(String year) {
-        this.year = year;
+    public List<Integer> getGenreIds() {
+        return genreIds;
     }
 
-    public String getRuntime() {
-        return runtime;
+    public void setGenreIds(List<Integer> genreIds) {
+        this.genreIds = genreIds;
     }
 
-    public void setRuntime(String runtime) {
-        this.runtime = runtime;
+    public String getName() {
+        return name;
     }
 
-    public String getGenre() {
-        return genre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public Double getPopularity() {
+        return popularity;
     }
 
-    private String genre;
-    private int img;
-
-    public String getEpisode() {
-        return episode;
+    public void setPopularity(Double popularity) {
+        this.popularity = popularity;
     }
 
-    public void setEpisode(String episode) {
-        this.episode = episode;
+    public List<String> getOriginCountry() {
+        return originCountry;
     }
 
-    public String getTitle() {
-        return title;
+    public void setOriginCountry(List<String> originCountry) {
+        this.originCountry = originCountry;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public Integer getVoteCount() {
+        return voteCount;
     }
 
-    public String getDetail() {
-        return detail;
+    public void setVoteCount(Integer voteCount) {
+        this.voteCount = voteCount;
     }
 
-    public void setDetail(String detail) {
-        this.detail = detail;
+    public String getFirstAirDate() {
+        return firstAirDate;
     }
 
-    public int getImg() {
-        return img;
+    public void setFirstAirDate(String firstAirDate) {
+        this.firstAirDate = firstAirDate;
     }
 
-    public void setImg(int img) {
-        this.img = img;
+    public String getBackdropPath() {
+        return backdropPath;
+    }
+
+    public void setBackdropPath(String backdropPath) {
+        this.backdropPath = backdropPath;
+    }
+
+    public String getOriginalLanguage() {
+        return originalLanguage;
+    }
+
+    public void setOriginalLanguage(String originalLanguage) {
+        this.originalLanguage = originalLanguage;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Double getVoteAverage() {
+        return voteAverage;
+    }
+
+    public void setVoteAverage(Double voteAverage) {
+        this.voteAverage = voteAverage;
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
+    public String getPosterPath() {
+        return posterPath;
+    }
+
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
     }
 
     @Override
@@ -103,12 +207,37 @@ public class TvShow implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(title);
-        dest.writeString(detail);
-        dest.writeString(episode);
-        dest.writeString(year);
-        dest.writeString(genre);
-        dest.writeString(runtime);
-        dest.writeInt(img);
+        dest.writeString(originalName);
+        dest.writeString(name);
+        if (popularity == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(popularity);
+        }
+        dest.writeStringList(originCountry);
+        if (voteCount == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(voteCount);
+        }
+        dest.writeString(firstAirDate);
+        dest.writeString(backdropPath);
+        dest.writeString(originalLanguage);
+        if (id == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(id);
+        }
+        if (voteAverage == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(voteAverage);
+        }
+        dest.writeString(overview);
+        dest.writeString(posterPath);
     }
 }

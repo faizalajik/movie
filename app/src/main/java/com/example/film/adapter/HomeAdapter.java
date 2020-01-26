@@ -1,4 +1,4 @@
-package com.example.film;
+package com.example.film.adapter;
 
 
 import android.content.Context;
@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.film.View.MoviesFragment;
-import com.example.film.View.TvShowFragment;
+import com.example.film.R;
+import com.example.film.view.MoviesFragment;
+import com.example.film.view.TvShowFragment;
 
 public class HomeAdapter extends FragmentPagerAdapter {
 

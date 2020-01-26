@@ -1,4 +1,4 @@
-package com.example.film;
+package com.example.film.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,12 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.film.Model.TvShow;
-import com.example.film.View.DetailActivity;
+import com.bumptech.glide.Glide;
+import com.example.film.R;
+import com.example.film.model.TvShow;
+import com.example.film.view.DetailActivity;
 
 import java.util.List;
-import static com.example.film.View.DetailActivity.KODE;
-import static com.example.film.View.DetailActivity.STATE;
+import static com.example.film.view.DetailActivity.KODE;
+import static com.example.film.view.DetailActivity.STATE;
 
 public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder> {
 
@@ -27,6 +29,9 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
         this.tvShowsList = tvShowsList;
     }
 
+    public  TvShowAdapter(){
+
+    }
     @NonNull
     @Override
     public TvShowAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -39,8 +44,9 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull TvShowAdapter.ViewHolder holder, final int position) {
-        holder.tvTitle.setText(tvShowsList.get(position).getTitle());
-        holder.img.setImageResource(tvShowsList.get(position).getImg());
+        holder.tvTitle.setText(tvShowsList.get(position).getName());
+
+        Glide.with(context).load("https://image.tmdb.org/t/p/w342"+tvShowsList.get(position).getPosterPath()).into(holder.img);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

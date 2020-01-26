@@ -8,14 +8,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DetailActivity">
+        tools:context=".view.DetailActivity">
 
         <ImageView
             android:id="@+id/background_photo"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/poster_hunterkiller"
+            android:src="@drawable/ic_launcher_background"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,7 @@
             android:layout_height="200dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="100dp"
-            android:src="@drawable/poster_hunterkiller"
+            android:src="@drawable/ic_launcher_background"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +40,7 @@
                 android:textSize="25sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/foto_poster"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="20dp">
             </TextView>
 
             <TextView
@@ -59,14 +59,16 @@
             </TextView>
         <TextView
             android:id="@+id/movie_title"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:paddingRight="5dp"
             android:text="@string/movie_title"
             android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@id/foto_poster"
+            app:layout_constraintStart_toEndOf="@id/foto_poster"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/background_photo" />
 
         <TextView
@@ -103,11 +105,11 @@
             app:layout_constraintTop_toTopOf="@id/year" />
 
         <TextView
-            android:id="@+id/runtime"
+            android:id="@+id/rated"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/runtime"
+            android:text="@string/rated"
             android:textColor="@android:color/black"
             android:textSize="15sp"
             app:layout_constraintLeft_toLeftOf="@id/year"
@@ -121,86 +123,28 @@
             android:text="@string/dot"
             android:textColor="@android:color/black"
             android:textSize="15sp"
-            app:layout_constraintLeft_toRightOf="@id/runtime"
-            app:layout_constraintTop_toTopOf="@id/runtime" />
+            app:layout_constraintLeft_toRightOf="@id/rated"
+            app:layout_constraintTop_toTopOf="@id/rated" />
 
         <TextView
-            android:id="@+id/movie_runtime"
+            android:id="@+id/movie_rated"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="@string/movie_runtime"
+            android:text="@string/movie_rated"
             android:textColor="@android:color/black"
             android:textSize="15sp"
             app:layout_constraintLeft_toRightOf="@id/dot1"
-            app:layout_constraintTop_toTopOf="@id/runtime" />
-
-        <TextView
-            android:id="@+id/genre"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/genre"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            app:layout_constraintLeft_toLeftOf="@id/runtime"
-            app:layout_constraintTop_toBottomOf="@id/runtime"></TextView>
-
-        <TextView
-            android:id="@+id/dot2"
+            app:layout_constraintTop_toTopOf="@id/rated" />
+        <ProgressBar
+            android:id="@+id/pbdetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:text="@string/dot"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            app:layout_constraintLeft_toRightOf="@id/genre"
-            app:layout_constraintTop_toTopOf="@id/genre" />
-
-        <TextView
-            android:id="@+id/movie_genre"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:paddingRight="5dp"
-            android:text="@string/movie_genre"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="@id/movie_runtime"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/genre" />
-
-        <TextView
-            android:id="@+id/episode"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/episodes"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            app:layout_constraintLeft_toLeftOf="@id/genre"
-            app:layout_constraintTop_toBottomOf="@id/movie_genre"></TextView>
-
-        <TextView
-            android:id="@+id/dot3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:text="@string/dot"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            app:layout_constraintLeft_toRightOf="@id/episode"
-            app:layout_constraintTop_toTopOf="@id/episode" />
-
-        <TextView
-            android:id="@+id/tvshow_episodes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="@string/tv_show_episodes"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            app:layout_constraintLeft_toRightOf="@id/dot3"
-            app:layout_constraintTop_toTopOf="@id/episode" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

@@ -1,4 +1,4 @@
-package com.example.film;
+package com.example.film.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -9,6 +9,10 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Movie implements Parcelable {
+
+    public Movie() {
+
+    }
 
     @SerializedName("popularity")
     @Expose

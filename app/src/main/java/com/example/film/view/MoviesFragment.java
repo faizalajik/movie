@@ -1,72 +1,77 @@
-package com.example.film;
+package com.example.film.view;
 
-
-import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.film.Model.Movie;
+import com.example.film.R;
+import com.example.film.adapter.MovieAdapter;
+import com.example.film.model.Movie;
+import com.example.film.viewmodel.HomeViewModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MoviesFragment extends Fragment {
 
     private RecyclerView rv;
-    private List<Movie> movieList;
-    private String[] title, description, movieYear, movieRuntime, movieGenre;
-    private TypedArray img;
-    private List<Movie> dataMovie;
-    private Movie movie;
-
+    private String language;
+    private HomeViewModel homeViewModel;
+    private ProgressBar pbMovie;
+    private  MovieAdapter movieAdapter;
     public MoviesFragment() {
 
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_movies, container, false);
+        return inflater.inflate(R.layout.fragment_movies, container, false);
+    }
 
-        rv = v.findViewById(R.id.rv_movie);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        movieAdapter = new MovieAdapter();
+        rv = view.findViewById(R.id.rv_movie);
+        pbMovie = view.findViewById(R.id.pbMovie);
         rv.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rv.setLayoutManager(layoutManager);
-        initData();
-        addData();
-        rv.setAdapter(new MovieAdapter(this.getActivity(), dataMovie));
 
-        return v;
+        language = getResources().getString(R.string.code_language);
+        homeViewModel = new ViewModelProvider(
+                this, new ViewModelProvider.NewInstanceFactory()).get(HomeViewModel.class);
+        homeViewModel.setMovie(language);
+
+        homeViewModel.getDataMovie().observe(this, new Observer<ArrayList<Movie>>() {
+            @Override
+            public void onChanged(ArrayList<Movie> movies) {
+                if(movies != null) {
+                    rv.setAdapter(new MovieAdapter(getActivity(),movies));
+                    showProgressBar(false);
+                }else {
+                    showProgressBar(true);
+                }
+            }
+        });
     }
 
-    public void initData() {
-        title = getResources().getStringArray(R.array.title);
-        description = getResources().getStringArray(R.array.description);
-        movieYear = getResources().getStringArray(R.array.year);
-        movieGenre = getResources().getStringArray(R.array.genre);
-        movieRuntime = getResources().getStringArray(R.array.runtime);
-        img = getResources().obtainTypedArray(R.array.image);
-    }
-
-    public void addData() {
-        dataMovie = new ArrayList<>();
-        for (int i = 0; i < title.length; i++) {
-            movie = new Movie();
-            movie.settitle(title[i]);
-            movie.setDetail(description[i]);
-            movie.setGenre(movieGenre[i]);
-            movie.setYear(movieYear[i]);
-            movie.setRuntime(movieRuntime[i]);
-            movie.setImg(img.getResourceId(i, -1));
-            dataMovie.add(movie);
+    private void showProgressBar (Boolean state){
+        if(state){
+            pbMovie.setVisibility(View.VISIBLE);
+        }else {
+            pbMovie.setVisibility(View.GONE);
         }
     }
 }

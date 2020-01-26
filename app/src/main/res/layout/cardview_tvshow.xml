@@ -12,14 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_orange_light"
-        android:paddingBottom="10dp">
+        android:layout_margin="5dp"
+        android:paddingVertical="10dp">
 
         <ImageView
             android:id="@+id/img_tvshow"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/ic_launcher_background"></ImageView>
 
         <TextView

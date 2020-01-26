@@ -5,180 +5,20 @@
     <string name="app_name">Film</string>
     <string name="Description">Deskripsi</string>
     <string name="tab_title1">Film</string>
-    <string name="tab_title2">TV Show</string>
+    <string name="tab_title2">Acara TV</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_show_title">tv show judul</string>
-    <string name="title">judul </string>
-    <string name="year">Tahun </string>
+    <string name="title">judul</string>
+    <string name="year">Tahun</string>
     <string name="movie_year">Film year</string>
     <string name="overview">Pertinjauan</string>
-    <string name="runtime">Durasi</string>
-    <string name="movie_runtime">Durasi Film</string>
+    <string name="rated">Penilaian</string>
+    <string name="movie_rated">Penilaian Film</string>
     <string name="dot">:</string>
     <string name="genre">Jenis</string>
+    <string name="code_language">id-ID</string>
     <string name="movie_genre">Jenis Film</string>
-    <string name="change_leanguage_setting">Ubah Pengaturan Bahasa</string>
-    <string name="episodes">Episode</string>
-    <string name="tv_show_episodes">TV Show Episode</string>
+    <string name="change_language_setting">Ubah Pengaturan Bahasa</string>
 
-    <string-array name="title">
-        <item>A Star</item>
-        <item>Aquaman</item>
-        <item>Avenger Infinity</item>
-        <item>Bird Box</item>
-        <item>Bohemian</item>
-        <item>Bumblebee</item>
-        <item>Creed</item>
-        <item>Deadpool</item>
-        <item>How to Train Your Dragon</item>
-        <item>Dragon Ball</item>
-        <item>Glass</item>
-        <item>Hunter Killer</item>
-    </string-array>
-
-    <string-array name="title_tvshow">
-        <item>Arrow</item>
-        <item>Doom Patrol</item>
-        <item>Dragon Ball</item>
-        <item>Fairy Tail</item>
-        <item>Family Guy</item>
-        <item>Flash</item>
-        <item>Gotham</item>
-        <item>Grey Anatomy</item>
-        <item>Hanna</item>
-        <item>Iron Fist</item>
-        <item>Naruto Shipudden</item>
-        <item>Ncis</item>
-    </string-array>
-
-    <string-array name="runtime">
-        <item>2j 16m</item>
-        <item>2j 24m</item>
-        <item>2j 29m</item>
-        <item>2j 4m</item>
-        <item>2j 15m</item>
-        <item>1j 54m</item>
-        <item>2j 13m</item>
-        <item>1j 48m</item>
-        <item>1j 40m</item>
-        <item>1j 41m</item>
-        <item>2j 9m</item>
-        <item>2j 2m</item>
-    </string-array>
-    <string-array name="runtime_tvshow">
-        <item>42m</item>
-        <item>60m</item>
-        <item>-</item>
-        <item>25m</item>
-        <item>22m</item>
-        <item>44m</item>
-        <item>43m, 60m</item>
-        <item>43m</item>
-        <item>50m</item>
-        <item>55m</item>
-        <item>25m</item>
-        <item>45m</item>
-    </string-array>
-    <string-array name="genre">
-        <item>Drama, Romance, Musik</item>
-        <item>Aksi, Petualangan, Fantasi</item>
-        <item>Petualangan, Aksi, Fiksi Sains</item>
-        <item>Menegangkan, Drama</item>
-        <item>Drama, Musik</item>
-        <item>Aksi, Petualangan</item>
-        <item>Drama</item>
-        <item>Aksi, Petualangan, Komedi</item>
-        <item>Fantasi, Petualangan, Animasi, Keluarga</item>
-        <item>Fantasi, Petualangan, Animasi</item>
-        <item>Menegangkan, Drama, Fiksi Sains</item>
-        <item>Aksi, Menegangkan</item>
-    </string-array>
-    <string-array name="genre_tvshow">
-        <item>Drama, Kriminal, Misteri</item>
-        <item>Aksi, Petualangan, Fiksi Sains</item>
-        <item>Petualangan, Aksi, Animasi</item>
-        <item>Petualangan, Aksi, Animasi, Fantasi</item>
-        <item>Animasi, Komedy</item>
-        <item>Drama,  Fiksi Sains</item>
-        <item>Drama, Fantasi, Kriminal</item>
-        <item>Drama</item>
-        <item>Drama, Petualangan, Aksi</item>
-        <item>Aksi, Petualangan</item>
-        <item>Animasi, Drama, Komedy</item>
-        <item>Aksi, Petualangan, Kriminal, Drama</item>
-    </string-array>
-
-    <string-array name="year">
-        <item>2013</item>
-        <item>2018</item>
-        <item>2018</item>
-        <item>2018</item>
-        <item>2018</item>
-        <item>2018</item>
-        <item>2015</item>
-        <item>2016</item>
-        <item>2010</item>
-        <item>2018</item>
-        <item>2019</item>
-        <item>2018</item>
-    </string-array>
-    <string-array name="year_tvshow">
-        <item>2012</item>
-        <item>2019</item>
-        <item>1989</item>
-        <item>2009</item>
-        <item>1999</item>
-        <item>2014</item>
-        <item>2014</item>
-        <item>2009</item>
-        <item>2019</item>
-        <item>2017</item>
-        <item>2007</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="episode">
-        <item>10 Episode</item>
-        <item>15 Episode</item>
-        <item>41 Episode</item>
-        <item>51 Episode</item>
-        <item>9 Episode</item>
-        <item>9 Episode</item>
-        <item>12 Episode</item>
-        <item>9 Episode</item>
-        <item>8 Episode</item>
-        <item>10 Episode</item>
-        <item>87 Episode</item>
-        <item>11 Episode</item>
-    </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string-array name="description">
-        <item>Musisi kawakan, Jackson Maine, menemukan dan jatuh cinta pada artis yang sedang berjuang, Ally. Dia baru saja menyerah pada mimpinya untuk menjadi besar sebagai penyanyi sampai Jack membujuknya menjadi sorotan.</item>
-        <item>Dulunya merupakan rumah bagi peradaban paling maju di Bumi, Atlantis sekarang merupakan kerajaan bawah laut yang diperintah oleh Raja Orm yang haus kekuasaan. Dengan pasukan yang sangat besar, Orm berencana untuk menaklukkan orang-orang samudera yang tersisa dan kemudian ke permukaan dunia.</item>
-        <item>Ketika Avengers dan sekutu mereka terus melindungi dunia dari ancaman yang terlalu besar untuk ditangani oleh satu pahlawan, bahaya baru telah muncul dari bayangan kosmik Thanos. Seorang lalim penghinaan intergalaksi</item>
-        <item>Lima tahun setelah kehadiran tak terlihat yang tak menyenangkan membuat sebagian besar masyarakat bunuh diri, seorang yang selamat dan dua anaknya melakukan upaya putus asa untuk mencapai keselamatan.</item>
-        <item>Penyanyi Freddie Mercury, gitaris Brian May, drummer Roger Taylor dan gitaris bass John Deacon membawa dunia musik dengan badai ketika mereka membentuk band rock n roll Queen pada tahun 1970. Lagu-lagu hit menjadi klasik instan</item>
-        <item>Dalam pelarian pada tahun 1987, Bumblebee menemukan tempat perlindungan di tempat barang rongsokan di kota pantai kecil California. Charlie, di puncak usia 18 tahun dan berusaha menemukan tempatnya di dunia, menemukan Bumblebee, pertempuran bekas luka</item>
-        <item>Mantan Juara Dunia Kelas Berat Rocky Balboa melayani sebagai pelatih dan mentor bagi Adonis Johnson, putra almarhum teman dan mantan saingannya Apollo Creed.</item>
-        <item>Deadpool menceritakan kisah asal-usul mantan anggota Pasukan Khusus yang menjadi tentara bayaran Wade Wilson, yang setelah menjadi sasaran percobaan jahat yang membuatnya memiliki kekuatan penyembuhan yang dipercepat, mengadopsi</item>
-        <item>Ketika Hiccup memenuhi mimpinya untuk menciptakan utopia naga yang damai, penemuan Toothless dari pasangan yang liar dan sulit ditangkap menarik Night Fury pergi. Ketika bahaya meningkat di rumah dan Hiccups berkuasa sebagai kepala desa diuji, baik naga dan pengendara harus membuat keputusan yang mustahil untuk menyelamatkan jenis mereka.</item>
-        <item>Dahulu kala di pegunungan, seorang master pertempuran yang dikenal sebagai Gohan menemukan seorang bocah aneh yang ia beri nama Goku. Gohan membesarkannya dan melatih Goku dalam seni bela diri sampai dia mati. Bocah muda dan sangat kuat itu ada di tangannya</item>
-        <item>Dalam serangkaian pertemuan yang meningkat, mantan penjaga keamanan David Dunn menggunakan kemampuan supernaturalnya untuk melacak Kevin Wendell Crumb, seorang lelaki terganggu yang memiliki dua puluh empat kepribadian. Sementara itu, kehadirannya samar</item>
-        <item>Kapten Glass dari USS Arkansas menemukan bahwa kudeta detat sedang terjadi di Rusia, jadi dia dan krunya bergabung dengan kelompok elit yang bekerja di lapangan untuk mencegah perang.</item>
-    </string-array>
-    <string-array name="tvshow_description">
-        <item>Playboy miliarder manja, Oliver Queen, hilang dan diduga tewas ketika kapal pesiarnya hilang di laut. Dia kembali lima tahun kemudian seorang pria yang berubah, bertekad untuk membersihkan kota sebagai main hakim sendiri bersenjatakan busur.</item>
-        <item>Anggota Patroli Doom masing-masing mengalami kecelakaan mengerikan yang memberi mereka kemampuan manusia super tetapi juga membuat mereka menjadi cacat dan cacat. Trauma dan tertindas, tim menemukan tujuan melalui Ketua, yang menyatukan mereka untuk menyelidiki fenomena paling aneh yang ada dan untuk melindungi Bumi dari apa yang mereka temukan.</item>
-        <item>Dragon Ball Z mengikuti petualangan Goku yang, bersama dengan Z Warriors, membela Bumi melawan kejahatan. Petualangan aksi menghibur dan memperkuat konsep yang baik melawan yang jahat. Dragon Ball Z mengajarkan kebajikan karakter yang berharga seperti kerja tim, loyalitas, dan kepercayaan. </item>
-        <item>Lucy adalah seorang gadis berusia 17 tahun, yang ingin menjadi penyihir dewasa penuh. Suatu hari ketika mengunjungi Kota Harujion, dia bertemu Natsu, seorang pria muda yang mudah sakit karena segala jenis transportasi. Tapi Natsu mencatat semua anak biasa, hedatas anggota dari salah satu serikat penyihir dunia yang paling terkenal: Fairy Tail.</item>
-        <item>Seri animasi animasi Freakindata Sweet yang sakit, terpelintir, tidak benar, menampilkan petualangan keluarga Griffin yang disfungsional. Bumbling Peter dan Longisffering Lois punya tiga anak. Stewie, seorang bayi yang brilian tetapi sadis, bertekad membunuh ibunya dan mengambil alih dunia, Meg yang tertua, dan merupakan gadis paling tidak populer di kota dan Chris sebagai anak tengah, hedatas tidak terlalu cerah tetapi memiliki hasrat untuk film. Anggota terakhir keluarga itu adalah Brian anjing yang bisa bicara dan lebih dari sekadar hewan peliharaan, ia membuat Stewie tetap mengontrol sementara menghirup Martinis dan memilah-milah masalah hidupnya sendiri.</item>
-        <item>Setelah akselerator partikel menyebabkan badai aneh, Penyelidik CSI Barry Allen disambar petir dan jatuh koma. Beberapa bulan kemudian dia terbangun dengan kekuatan kecepatan super, memberinya kemampuan untuk bergerak melalui Central City seperti malaikat penjaga yang tak terlihat. Meskipun awalnya bersemangat dengan kekuatan barunya, Barry terkejut menemukan bahwa dia bukan satu-satunya metahuman yang diciptakan setelah ledakan akselerator dan tidak semua orang menggunakan kekuatan baru mereka untuk kebaikan. Barry bermitra dengan S.T.A.R. Lab dan mendedikasikan hidupnya untuk melindungi yang tidak bersalah. Untuk saat ini, hanya beberapa teman dekat dan rekan yang tahu bahwa Barry secara harfiah adalah manusia tercepat yang pernah hidup, tetapi perlu waktu lama sebelum dunia mengetahui apa yang telah menjadi Barry Allen. Flash.</item>
-        <item>Semua orang tahu nama Komisaris Gordon. Dia adalah salah satu musuh terbesar dunia kejahatan, seorang pria yang reputasinya identik dengan hukum dan ketertiban. Tapi apa yang diketahui dari kisah Gordons dan kebangkitannya dari detektif pemula ke Komisaris Polisi Apa yang diperlukan untuk menavigasi berbagai lapisan korupsi yang diam-diam memerintah Kota Gotham, tempat bertelurnya penjahat paling ikonik di dunia Dan keadaan apa yang membuat mereka lebih besar daripada persona kehidupan yang akan menjadi Catwoman, The Penguin, The Riddler, Two Face dan The Joker</item>
-        <item>Mengikuti kehidupan pribadi dan profesional sekelompok dokter di Seattles Grey Sloan Memorial Hospital. </item>
-        <item>Drama thriller dan kedatangan zaman ini mengikuti perjalanan seorang gadis muda yang luar biasa ketika ia menghindari pengejaran tanpa henti dari seorang agen CIA yang offbook dan mencoba untuk menggali kebenaran di balik siapa dirinya. Berdasarkan film Joe Wright 2011</item>
-        <item>Danny Rand muncul kembali 15 tahun setelah dianggap mati. Sekarang, dengan kekuatan Iron Fist, ia berusaha untuk merebut kembali masa lalunya dan memenuhi takdirnya.</item>
-        <item>Naruto Shippuuden adalah kelanjutan dari serial TV animasi asli Naruto. Kisah ini berkisah tentang Uzumaki Naruto yang lebih tua dan sedikit lebih matang dan upayanya untuk menyelamatkan temannya Uchiha Sasuke dari cengkeraman ular seperti Shinobi, Orochimaru. Setelah 2 setengah tahun, Naruto akhirnya kembali ke desanya Konoha, dan mulai membuat ambisinya untuk bekerja, meskipun itu tidak akan mudah, karena Dia telah mengumpulkan beberapa musuh yang lebih berbahaya, seperti organisasi shinobi; Akatsuki.</item>
-        <item>Dari pembunuhan dan spionase hingga terorisme dan kapal selam curian, tim agen khusus menyelidiki kejahatan apa pun yang memiliki sedikit pun bukti yang terhubung dengan personel Angkatan Laut dan Korps Marinir, terlepas dari pangkat atau jabatannya.</item>
-    </string-array>
 </resources>
