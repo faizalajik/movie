@@ -1,4 +1,4 @@
-package com.example.favoriteapp;
+package com.example.film.database;
 
 import android.content.ContentValues;
 import android.os.Parcel;
@@ -36,14 +36,6 @@ public class MovieDb implements Parcelable {
 
     public static Creator<MovieDb> getCREATOR() {
         return CREATOR;
-    }
-
-    public MovieDb (int id, String title,String overview,String year,String posterPath){
-        this.id = id;
-        this.title = title;
-        this.overview = overview;
-        this.posterPath = posterPath;
-        this.year = year;
     }
 
     public MovieDb(Parcel in) {
@@ -134,5 +126,24 @@ public class MovieDb implements Parcelable {
         dest.writeString(posterPath);
         dest.writeString(category);
         dest.writeString(year);
+    }
+    public static MovieDb fromContentValue(ContentValues values){
+        final MovieDb movieDb =  new MovieDb();
+        if(values.containsKey("id")){
+            movieDb.id = values.getAsInteger("id");
+        }
+        if (values.containsKey("title")){
+            movieDb.title = values.getAsString("title");
+        }
+        if (values.containsKey("overview")){
+            movieDb.overview = values.getAsString("overview");
+        }
+        if (values.containsKey("poster_path")){
+            movieDb.posterPath = values.getAsString("poster_path");
+        }
+        if (values.containsKey("year")){
+            movieDb.year = values.getAsString("year");
+        }
+        return movieDb;
     }
 }
